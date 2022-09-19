@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>게시판 - My Blog</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/headerfooter.css">
+    <link rel="stylesheet" href="css/subpage.css">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/touch.png">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="js/flat.min.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <section class="info_section">
+            <ul class="info_list">
+                <li>
+                    <a href="index.html">
+                        <img src="images/s_images/info_icon_01.png" alt="">
+                    </a> <!-- 홈으로 가기 -->
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/s_images/info_icon_02.png" alt="">
+                    </a> <!-- 로그인 -->
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/s_images/info_icon_03.png" alt="">
+                    </a> <!-- 회원가입 -->
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/s_images/info_icon_04.png" alt="">
+                    </a> <!-- 검색 -->
+                </li>
+            </ul>
+        </section>
+        <header class="header">
+            <h1 class="logo">
+                <a href="index.html">
+                    나의 첫<br>블로그
+                </a>
+            </h1>
+            <nav class="nav">
+                <ul class="gnb">
+                    <li>
+                        <a href="index.html">홈</a>
+                        <span class="sub_menu_toggle_btn">하위 메뉴 토글 버튼</span>
+                    </li>
+                    <li>
+                        <a href="introduce.html">블로그 소개</a>
+                        <span class="sub_menu_toggle_btn">하위 메뉴 토글 버튼</span>
+                    </li>
+                    <li>
+                        <a href="gallery.html">갤러리</a>
+                        <span class="sub_menu_toggle_btn">하위 메뉴 토글 버튼</span>
+                    </li>
+                    <li>
+                        <a href="board.html">게시판</a>
+                        <span class="sub_menu_toggle_btn">하위 메뉴 토글 버튼</span>
+                    </li>
+                </ul>
+            </nav>
+            <span class="menu_toggle_btn">전체 메뉴 토글 버튼</span>
+        </header>
+        <section class="sub_header_section">
+            <h2>게시판</h2>
+            <ul class="breadcrum_list">
+                <li><a href="index.html">홈 /</a></li>
+                <li><a href="#">게시판</a></li>
+            </ul>
+        </section>
+        <section class="content_section">
+            <div class="content_row_1">
+                <table class="board_table">
+                    <caption>문의사항 게시판</caption>
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>5</td>
+                            <td><a href="#">홈페이지를 꾸몄습니다</a></td>
+                            <td>관리자</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="#">홈페이지를 다시오픈했습니다</a></td>
+                            <td>부관리자</td>
+                            <td>294</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="#">홈페이지를 폐쇄했습니다</a></td>
+                            <td>부관리자2</td>
+                            <td>693</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="#">홈페이지를 리뉴얼했습니다</a></td>
+                            <td>관리자</td>
+                            <td>969</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="#">홈페이지를 오픈했습니다</a></td>
+                            <td>관리자</td>
+                            <td>2048</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="content_row_2">
+                <div class="search_box">
+                    <form action="#" method="get">
+                        <input type="search" name="gallery_search_window" class="search_window" placeholder="검색어">
+                        <div class="search_select_box">
+                            <span>검색대상</span>
+                            <ul class="search_select_list">
+                                <li>제목</li>
+                                <li>내용</li>
+                                <li>제목+내용</li>
+                                <li>댓글</li>
+                                <li>이름</li>
+                                <li>닉네임</li>
+                                <li>아이디</li>
+                                <li>태그</li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="write_box">
+                    <a href="#">글 쓰기</a>
+                </div>
+            </div>
+            <div class="content_row_3">
+                <span class="list_prev_btn">게시판 이전 버튼</span>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <span class="list_next_btn">게시판 다음 버튼</span>
+            </div>
+        </section>
+        <footer class="footer">
+            <p>&copy; 2022. My Blog. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
