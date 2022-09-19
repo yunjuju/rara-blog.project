@@ -1,0 +1,58 @@
+/* 모바일용 CSS */
+/* 모바일 - 서브헤더 영역 CSS */
+.sub_header_section {
+    order: 3;
+    padding: 48px 0;
+    background-color: #219AF7;
+    text-align: center;
+}
+
+.sub_header_section h2 {
+    margin-bottom: 12px;
+    font-size: 1.313em;
+    color: white;
+}
+
+.breadcrum_list li {
+    display: inline;
+    font-size: 0.813em;
+}
+
+/* 모바일 - 컨텐츠 영역 CSS */
+.content_section {
+    order: 4;
+    padding: 20px;
+    background: white;
+}
+
+/* 모바일 - 푸터 영역 CSS */
+.footer {
+    order: 5;
+}
+
+/* 태블릿 CSS */
+@media all and (min-width: 768px) {
+    .sub_header_section {
+        width: 100%;
+    }
+
+    .content_section {
+        padding: 40px;
+    }
+}
+
+/* PC용 CSS */
+@media all and (min-width: 960px) {
+    .sub_header_section {
+        order: 2;
+    }
+
+    .content_section {
+        order: 3;
+        padding: 60px;
+    }
+
+    .footer {
+        order: 4;
+    }
+}

@@ -1,0 +1,169 @@
+/* 모바일용 CSS*/
+/* 모바일 - 컨텐츠 영역 CSS */
+.gallery_list img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+    transition: all 0.4s;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+.gallery_list img:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+.gallery_list li {
+    margin-top: 20px;
+}
+
+.gallery_list li:nth-child(1) {
+    margin-top: 0;
+}
+
+.content_row_2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 40px 0;
+}
+
+.search_window {
+    width: 120px;
+    height: 28px;
+    font-size: 0.688em;
+    text-indent: 10px;
+}
+
+.search_select_box {
+    display: none;
+}
+
+.write_box a {
+    display: block;
+    background-color: pink;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 0.813em;
+}
+
+.content_row_3 {
+    display: flex;
+    justify-content: center;
+}
+
+.content_row_3 a {
+    width: 26px;
+    height: 26px;
+    border: 1px solid salmon;
+    color: salmon;
+
+    text-align: center;
+    line-height: 26px;
+    transition: all 0.2s;
+}
+
+.content_row_3 a:hover {
+    background-color: pink;
+    color: white;
+}
+
+.content_row_3 a:nth-of-type(2) {
+    margin: 0 6px;
+}
+
+.content_row_3 span {
+    width: 28px;
+    height: 28px;
+    text-indent: -9999px;
+}
+
+.content_row_3 span.list_prev_btn {
+    background: lightpink url(../images/s_images/list_prev_btn.png) center center no-repeat;
+    margin-right: 10px;
+}
+
+.content_row_3 span.list_next_btn {
+    background: lightpink url(../images/s_images/list_next_btn.png) center center no-repeat;
+    margin-left: 10px;
+}
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+    /* 태블릿 - 컨텐츠 영역 CSS*/
+
+    .gallery_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /*양끝으로 칸 띄우기*/
+}
+    .gallery_list li{
+    width: 48%;
+}
+    .gallery_list li:nth-child(2){
+        margin-top: 0;
+    }
+
+    .search_select_box{
+        display: inline-block; /* 글씨가 바로 옆에 오도록 하기 위해 사용*/
+        position: relative;
+    }
+
+    .search_select_box span{
+        display: inline-block;
+        width: 80px;
+        height: 28px;
+        font-size: 0.813em;
+
+        background-color: pink;
+        color: white;
+        
+
+        line-height: 30px;
+        text-align: center;
+
+
+        /*마우스 올렸을 때 누를 수 있는 느낌 만들기*/
+        cursor: pointer;
+    }
+
+    .search_select_list {
+        position: absolute;
+        top: 105%; 
+        left: 0;
+        width: 100%; /* 하나의 버튼으로서 작동하게 하기위해 너비 100을 차지하도록 하려고 주는것*/
+        display: none; /*있는데 안 보이게 해줌*/
+
+    }
+    .search_select_list li{
+        color: white;
+        background-color: pink;
+        cursor: pointer;
+
+        font-size: 0.75em;
+        text-indent: 10px;
+        padding: 6px 0;
+
+    }
+
+    .search_select_box:hover .search_select_list{
+        display: block; /*마우스 올리면 보이게 함*/
+    }
+}
+
+
+/* PC용 CSS */
+@media all and (min-width: 960px) {
+    /*PC - 컨텐츠 영역 CSS*/
+    .gallery_list li{
+        width: 23%;
+    }
+
+    .gallery_list li:nth-child(3),
+    .gallery_list li:nth-child(4) {
+        margin-top: 0;
+    }
+
+}

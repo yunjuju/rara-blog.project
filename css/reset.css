@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/* 브라우저별로 설정되어있는 기본 CSS 내용을 초기화 */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption , tbody, tfoot, thead, tr, td, th, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    font-family: NanumGothic, 나눔고딕, 'Nanum Gothic', '나눔 고딕', '맑은 고딕', HelveticaNeue, DroidSans, sans-serif;
+    background: url(images/s_images/body_bg.png);
+    /* 배경이 될 이미지 (간단한 무늬, 단색) */ 
+    line-height: 1;
+}
+
+/* HTML5 태그가 정상 작동하도록 display 속성 변경 */
+article, aside, details, figcaption, figure, footer,  header, hgroup, menu, nav, section {
+    display: block;
+}
+
+nav ul, li {
+    list-style: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    text-decoration: none;
+    vertical-align: baseline;
+    background: transparent;
+    color: white;
+}
+
+img {
+    /* img 태그 사이에 간격 삭제 */
+    vertical-align: top;
+}
+
+table {
+    /* 테이블과 셀 사이의 간격 삭제 */
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    vertical-align: top;
+    appearance: none;
+    border: 1px solid #E65D5D;
+    color: #E65D5D;
+    border-radius: 0;
+    font-family: NanumGothic, 나눔고딕, 'Nanum Gothic', '나눔 고딕', '맑은 고딕', HelveticaNeue, DroidSans, sans-serif;
+}
+
+/* 브라우저별로 적용이 안되는 속성 적용 */
+input::-moz-input-placeholder { /* 파이어폭스 */
+    color: #E65D5D;
+}
+
+input::-webkit-input-placeholder { /* 크롬, 사파리 */
+    color: #E65D5D;
+}
+
+/* 익스플로러: -ms-* (사라짐) */ 
+
+/* 웹폰트 */
+@font-face {
+    font-family: "Nanum Gothic";
+    src: url(../webfont/NanumGothic.eot);
+}
+
+@font-face {
+    font-family: "Nanum Gothic";
+    src: url(../webfont/NanumGothic.woff);
+}

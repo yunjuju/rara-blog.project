@@ -1,0 +1,287 @@
+/* 변수 */
+:root {
+    --main-color: #2ECC71;
+    --main-color-border: #39D67C;
+    --main-color-shadow: #25AB2E;
+
+    --nav-color: #2C3E50;
+
+    --latest-post-color: #FFC40F;
+    --latest-post-shadow: #B98E0B;
+
+    --popular-post-color: #A660C2;
+    --popular-post-shadow: #714185;
+    --post-title-color: #FFF;
+
+    --gallery-color: #E65D5D;
+    --gallery-shadow: #C43434;
+
+    --rankup-color: #219AF7;
+    --rankup-shadow: #1974BA;
+
+    --banner-color-1: #E6567A;
+    --banner-color-2: #C44968;
+
+    --social-color: #FFF;
+
+    --footer-color: #474747;
+    --footer-text-color: #FFF;
+    --footer-shadow: #191919;
+
+    --white: #FFF;
+}
+
+/* 모바일용 CSS */
+/* 기본 CSS */
+#wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* 모바일 - 인포 영역 CSS */
+.info_section {
+    order: 1;
+    width: 100%;
+    background-color: var(--main-color);
+    border-bottom: 1px solid var(--main-color-border);
+}
+
+.info_list {
+    display: flex;
+}
+
+.info_list li {
+    width: 25%;
+    text-align: center;
+}
+
+.info_list li a {
+    display: block;
+    padding: 15px 0;
+}
+
+/* 모바일 - 헤더 영역 CSS */
+.header {
+    display: flex;
+    order: 2;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.logo {
+    order: 1;
+    width: 100%;
+    padding: 30px 0;
+    font-size: 1.188em;
+    line-height: 21px;
+    
+    text-align: center;
+    background-color: var(--main-color);
+    text-shadow: 0 1px 1px var(--main-color-shadow);
+}
+
+.nav {
+    order: 2;
+    width: 100%;
+}
+
+.gnb{
+    display: none;
+}
+
+.gnb li {
+    display: flex;
+    background-color: var(--nav-color);
+}
+
+.gnb li a {
+    width: 80%;
+    padding: 20px 0 20px 20px;
+    font-size: 0.938em;
+    font-weight: bold;
+}
+
+.gnb li span {
+    width: 20%;
+    text-indent: -9999px;
+    background-image: url(../images/s_images/sub_menu_toggle_btn.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    /*
+    위 세 줄을 한 번에 표현 
+    background: url(~~) center center no-repeat;
+    */
+    cursor: pointer;
+}
+
+.menu_toggle_btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    /* 이 버튼이 포함되어있는 header 클래스가 position relative이기 때문에 위치를 변경하기 위해서는 position absolute로 설정해야 함 */
+    top: 10px;
+    right: 10px;
+    text-indent: -9999px;
+    background: url(../images/s_images/menu_toggle_btn.png);
+    cursor: pointer;
+}
+
+/* 모바일 - 푸터 영역 CSS */
+.footer {
+    order: 10;
+    width: 100%;
+    background-color: var(--footer-color);
+}
+
+.footer p {
+    color: var(--footer-text-color);
+    text-align: center;
+    font-size: 0.813em;
+    padding: 20px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px var(--footer-shadow);
+}
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+    /* 기본 CSS */
+    #wrap {
+        flex-flow: row wrap;
+    }
+
+    /* 태블릿 - 헤더 영역 CSS */
+    .header {
+        /* display: flex를 다시 쓰지 않는 이유 -> 모바일에서 이미 display: flex라고 정의 해주었기 때문에 이를 상속받아서 그대로 사용 */
+        flex-direction: row;
+        /* 모바일에서는 세로 방향이었지만, 태블릿에서는 가로 방향으로 놓기 위해서 row로 설정 */
+    }
+
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 15.625%; /* 120/768*100 */
+        padding: 0;
+    }
+
+    .logo a {
+        display: block;
+        padding: 50px 0;
+    }
+
+    .nav {
+        position: relative;
+        min-height: 80px;
+        background-color: var(--main-color);
+    }
+
+    .gnb {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 20;
+        width: 40.10417%; /* 308 / 768 * 100 */
+    }
+
+    .menu_toggle_btn {
+        top: 50px;
+        right: 30px;
+        z-index: 20;
+        margin-top: -25px;
+    }
+
+    /* 태블릿 - 푸터 영역 CSS */
+    .footer p {
+        padding: 40px;
+    }
+}
+
+/* PC용 CSS */
+@media all and (min-width: 960px) {
+    /* 기본 CSS */
+    #wrap {
+        width: 90%;
+        position: relative;
+    }
+
+    /* PC - 인포 영역 CSS */
+    .info_section {
+        order: 0;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        z-index: 30;
+        width: auto;
+        border-bottom: 0;
+    }
+
+    .info_list li {
+        width: auto;
+        margin-left: 15px;
+    }
+
+    .info_list li a {
+        padding: 0;
+    } 
+
+    /* PC - 헤더 영역 CSS */
+    .header {
+        order: 1;
+        justify-content: flex-end;
+        position: static;
+        /* 헤더 영역 내부의 요소들이 PC 환경에서는 flex로 적용시키기 위해서 position 을 기본 값인 static으로 돌려놓음 */
+    }
+
+    .logo {
+        width: 12.5%; /* 120 / 960 * 100 */
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        position: static;
+        width: 87.5%; /* 960 - 120 = 840 / 960 * 100 */
+    }
+
+    .gnb {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: 100%;
+    }
+
+    .gnb li {
+        display: block;
+        background: none;
+        margin-left: 5.95238%; /* 50 / 840 * 100 */
+    }
+
+    .gnb li a {
+        width: auto;
+        padding: 0;
+        text-indent: 0;
+    }
+
+    .gnb li span {
+        display: none;
+    }
+
+    .menu_toggle_btn {
+        display: none;
+    }
+
+    /* PC - 푸터 영역 */
+    .footer {
+        order: 9;
+    }
+
+    .footer p {
+        text-align: left;
+    }
+}

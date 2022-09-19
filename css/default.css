@@ -1,0 +1,406 @@
+/* 변수 */
+:root {
+    --main-color: #2ECC71;
+    --main-color-border: #39D67C;
+    --main-color-shadow: #25AB2E;
+
+    --nav-color: #2C3E50;
+
+    --latest-post-color: #FFC40F;
+    --latest-post-shadow: #B98E0B;
+
+    --popular-post-color: #A660C2;
+    --popular-post-shadow: #714185;
+    --post-title-color: #FFF;
+
+    --gallery-color: #E65D5D;
+    --gallery-shadow: #C43434;
+
+    --rankup-color: #219AF7;
+    --rankup-shadow: #1974BA;
+
+    --banner-color-1: #E6567A;
+    --banner-color-2: #C44968;
+
+    --social-color: #FFF;
+
+    --footer-color: #474747;
+    --footer-text-color: #FFF;
+    --footer-shadow: #191919;
+
+    --white: #FFF;
+}
+
+/* 모바일용 CSS*/
+/* 모바일 - 슬라이더 영역 CSS */
+.slider_section {
+    order: 3;
+    display: flex;
+    justify-content: space-between;
+    /* 가로(주축)방향으로 양 끝에 배치 */
+    align-items: center;
+    /* 세로(교차축)방향으로 가운데에 배치 */
+    width: 100%;
+    height: 300px;
+    background: url(../images/p_images/slider_01.jpg) center center no-repeat;
+}
+
+.slider_section span {
+    width: 34px;
+    height: 39px;
+    text-indent: -9999px;
+    background: url(../images/s_images/slider_arrow.png) no-repeat;
+    cursor: pointer;
+}
+
+.slider_section span.prev_btn {
+    margin-left: -10px;
+    background-position: 0 0;
+}
+
+.slider_section span.next_btn {
+    margin-right: -10px;
+    background-position: -34px 0;
+}
+
+/* 모바일 - 최근 글, 인기 글 영역 CSS */
+.latest_post_section {
+    order: 4;
+    background-color: var(--latest-post-color);
+    text-shadow: 0 1px 1px var(--latest-post-shadow);
+}
+
+.popular_post_section {
+    order: 5;
+    background-color: var(--popular-post-color);
+    text-shadow: 0 1px 1px var(--popular-post-shadow);
+}
+
+.latest_post_section,
+.popular_post_section {
+    padding: 40px 12.5%;
+}
+
+.title {
+    font-size: 1.188em;
+    text-align: center;
+    color: var(--post-title-color);
+    margin-bottom: 30px;
+}
+
+.latest_post_list li,
+.popular_post_list li {
+    margin-top: 15px;
+    font-weight: bold;
+
+    padding-left: 14px;
+    background: url(../images/s_images/post_circle_icon.png) left center no-repeat;
+}
+
+.latest_post_list li:first-child,
+.popular_post_list li:first-child {
+    margin-top: 0;
+}
+
+/* 모바일 - 갤러리 영역 CSS */
+.gallery_section {
+    order: 6;
+    padding: 50px 12.5%; /* 40 / 320 * 100 */ 
+
+    background-color: var(--gallery-color);
+    text-align: center;
+    text-shadow: 0px 1px 1px var(--gallery-shadow);
+}
+
+.gallery_section img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px var(--gallery-shadow);
+}
+
+.gallery_list li:nth-child(2) {
+    margin-top: 30px;
+}
+
+.gallery_list li figcaption {
+    margin-top: 20px;
+    font-size: 1.188em;
+    font-weight: bold;
+}
+
+/* 모바일 - 인기검색어 영역 CSS */
+.rankup_section {
+    order: 7;
+    background-color: var(--rankup-color);
+    padding: 40px 12.5%; /* 40 / 320 * 100 */
+    text-shadow: 0 1px 1px var(--rankup-shadow);
+}
+
+.rankup_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.rankup_list li {
+    width: 47.91667%; /* (320-40-40-10)/2 / 240 * 100 */
+    margin-top: 15px;
+}
+
+.rankup_list:first-child,
+.rankup_list:nth-child(2) {
+    margin-top: 0;
+}
+
+.rankup_list li a {
+    border: 1px solid var(--white);
+    border-radius: 5px;
+
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* 배너 영역 CSS */
+.banner_section {
+    order: 8;
+}
+
+.banner_box_01 {
+    background-color: var(--banner-color-1);
+}
+
+.banner_box_02 {
+    background-color: var(--banner-color-2);
+}
+
+.banner_box_01 a {
+    display: block;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.banner_list {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 12.5%; /* 40 / 320 * 100 */
+}
+
+/* 모바일 - SNS 영역 */
+.social_section {
+    order: 9;
+    padding: 30px 12.5%; /* 40 / 320 * 100 */
+    background-color: var(--social-color);
+}
+
+.social_list {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+    /* 태블릿 - 슬라이더 영역 CSS */
+    .slider_section {
+        width: 59.89583%; /* 460 / 768 * 100 */
+        height: auto;
+    }
+
+    .slider_section span {
+        z-index: 10; 
+        /* 네비게이션 메뉴 > 버튼 > 나머지 */ 
+        position: relative;
+    }
+
+    /* 태블릿 - 최근 글, 인기 글 영역 */
+    .latest_post_section {
+        order: 5;
+    }
+
+    .popular_post_section {
+        order: 6;
+    }
+
+    .latest_post_section,
+    .popular_post_section {
+        width: 31.25%; /* 240 / 768 * 100 */
+        padding-left: 5.20833%; /* 40 / 768 * 100 */
+        padding-right: 5.20833%; /* 40 / 768 * 100 */
+    }
+
+    /* 태블릿 - 갤러리 영역 CSS */
+    .gallery_section {
+        order: 8;
+        width: 60.9375%; /* 468 / 768 * 100 */
+        padding-left: 5.20833%; /* 40 / 768 * 100 */   
+        padding-right: 5.20833%;
+    }
+
+    .gallery_list {
+        display: flex;
+    }
+
+    .gallery_list li {
+        width: 47.00855%; /* 220 / (548-40-40) * 100 */
+    }
+
+    .gallery_list li:nth-child(2) {
+        margin-top: 0;
+        margin-left: 5.98290%; /* 28 / (548-40-40) * 100 */
+    }
+
+    /* 태블릿 - 인기 검색어 영역 CSS */
+    .rankup_section {
+        order: 4;
+        width: 29.6875%; /* 228 / 768 * 100 */
+        padding-left: 5.20833%; /* 40 / 768 * 100 */
+        padding-right: 5.20833%;
+    }
+
+    /* 태블릿 - 배너 영역 CSS */
+    .banner_section {
+        order: 9;
+        width: 28.64583%; /* 220 / 768 * 100 */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .banner_section div {
+        flex: 1 1 0;
+    }
+
+    .banner_box_01 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner_box_01 a {
+        display: inline;
+        padding: 0;
+    }
+
+    .banner_box_02 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner_list {
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .banner_list li:nth-child(2) {
+        margin: 0 8px;
+    }
+
+    /* 태블릿 - SNS 영역 */
+    .social_section {
+        order: 7;
+        width: 16.66667%; /* 128 / 768 * 100 */
+        padding: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social_list {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .social_list li:nth-child(2) {
+        margin: 24px 0;
+    }
+}
+
+/* PC용 CSS */
+@media all and (min-width: 960px) {
+    /* PC - 슬라이더 영역 CSS */
+    .slider_section {
+        order: 2;
+        width: 50%; /* 480 / 960 * 100 */
+    }
+
+    /* PC - 최근 글, 인기 글 영역 CSS */
+    .latest_post_section,
+    .popular_post_section {
+        width: 30%;
+        padding-left: 0;
+        padding-right: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* PC - 갤러리 영역 CSS */
+    .gallery_section {
+        order: 3;
+        width: 18.75%; /* 180 / 960 * 100 */
+        padding: 40px 4.16667%; /* 40 / 960 * 100 */
+    }
+
+    .gallery_list {
+        display: block;
+    }
+
+    .gallery_list li {
+        width: auto;
+    }
+
+    .gallery_list li:nth-child(2) {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    /* PC - 인기 검색어 영역 */
+    .rankup_section {
+        display: flex;
+        flex-direction: column;
+        width: 22.91667%; /* 220 / 960 * 100 */
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .rankup_list {
+        display: block;
+    }
+
+    .rankup_list li {
+        width: auto;
+        text-align: left;
+        counter-increment: rankup-counter;
+    }
+
+    .rankup_list li::before {
+        color: var(--white);
+        font-weight: bold;
+        text-shadow: 0 1px 1px var(--rankup-shadow);
+        padding-right: 6px;
+        content: counter(rankup-counter) '.';
+    }
+
+    .rankup_list li a {
+        display: inline;
+        padding: 0;
+        border: 0;
+    }
+
+    /* PC - 배너 영역 */
+    .banner_section {
+        order: 7;
+        width: 22.91667%; /* 220 / 960 * 100 */
+    }
+
+    /* PC - SNS 영역 */
+    .social_section {
+        order: 8;
+        width: 17.08333%; 
+    }
+}

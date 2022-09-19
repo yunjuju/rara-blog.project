@@ -1,0 +1,64 @@
+index.html 에 있는
+<section class="info_section"> 부분과 <header class="header"> 부분을 introduce.html, gallery.html, board.html 의 <div id="wrap"> 내부에 복사 붙여넣기 해줍니다
+
+<footer class="footer"> 부분을 모든 서브 페이지의 <div id="wrap"> 내부의 맨 아래에 복사 붙여넣기 해줍니다
+
+<table>: 표 만드는 태그
+- <thead>, <tbody>, <tfoot> 시멘틱 태그 -> 테이블의 머리, 몸통, 끝자락
+- <caption>: 표의 제목
+- <colgroup>: 열 별로 스타일을 적용할 때 사용하는 태그
+- <tr>: 표에서 행 1개
+- 행 내부에서 칸을 만듬
+  * <th>: 대표격인 칸=셀
+  * <td>: 일반적인 칸
+<th>와 <td> 차이점
+<th>: 칸 내부에서 글씨가 가운데 정렬 + 굵음 효과
+<td>: 칸 내부에서 왼쪽 정렬 + 일반 글씨 효과
+
+images/s_images
+
+- introduce_01.png ~ 04.png
+사진 크기
+01 -> 446 x 312
+02~04 -> 200 x 200
+
+
+images/p_images
+- sub_gallery_01.jpg ~ 12.jpg
+400 x 400 (임의로 해도 상관 X)
+
+
+인포 영역, 헤더 영역, 푸터 영역은 모든 페이지 (서브 페이지 + 메인 페이지)에서 동일한 스타일을 갖기 때문에 굳이 복사 붙여넣기 할 필요 없이 하나의 css 파일을 만들어서 관리
+모든 페이지의 head에
+<link rel="stylesheet" href="css/headerfooter.css"> 를 추가
+
+default.css -> headerfooter.css 로 이동 (잘라서 붙여넣기)
+모바일용 CSS (기본, 인포, 헤더, 푸터) 
+태블릿용 CSS (기본, 헤더, 푸터)
+PC용 CSS (기본, 인포, 헤더, 푸터) 
+맨 위의 변수 (복사 붙여넣기)
+
+태블릿과 PC용 CSS는 미디어 쿼리 (@media all and ~~~) 로 관리되고 있기 때문에 (자르면X)
+
+
+모든 서브페이지의 head에
+<link rel="s~" href="css/subpage.css"> 추가
+-> 서브페이지들에 공통적으로 들어갈 스타일 코드
+(index.html 은 해당 안됨)
+
+
+환경별 order 번호
+
+모바일/태블릿
+인포 -> 1 (바꿀 필요X)
+헤더 -> 2 (바꿀 필요X)
+서브헤더 -> 3
+컨텐츠 -> 4
+푸터 -> 5
+
+PC
+헤더 -> 1 (바꿀 필요X)
+서브헤더 -> 2
+컨텐츠 -> 3
+푸터 -> 4
+

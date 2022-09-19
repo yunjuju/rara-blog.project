@@ -1,0 +1,51 @@
+A > B 자식 결합자
+A 바로 아래에 있는 B
+.A > span
+<div class="A">
+	<span></span> v
+	<div>
+		<span></span>
+	</div>
+</div>
+
+A B 자손 결합자
+A 아래에 있는 모든 B
+.A span
+<div class="A">
+	<span></span> v
+	<div>
+		<span></span> v
+	</div>
+</div>
+
+.para p:not(:last-child)
+para 클래스 아래에 있는 p 태그에 대해서
+last-child(마지막 자식)을 제외한 모든 요소
+
+content_row_2에서 글씨를 양쪽 정렬
+-> text-align: justify; 
+ 장점: 튀어나오는 글씨를 정리할 수 있다
+ 단점: 글씨가 짧으면 왼쪽정렬이 된다
+-> text-align: center;
+ 장단점 반대
+
+filter
+-> grayscale: 흑백 (0~1 숫자) 
+-> blur: 흐리게 (얼마나 흐리게 할지 px)
+-> brightness: 밝기
+-> opacity: 투명도 조절 (0~1)
+-> hue-rotate: 색상환에서 몇 도의 색깔 (0~360)
+-> saturate: 채도 조절 (0~1)
+-> sepia: 세피아 효과 (0~1)
+-> contrast: 대비 조절 (0~1)
+
+색깔 표현 -> rgb, hsl
+
+images/s_images
+list_prev_btn.png : < 화살표
+list_next_btn.png : > 화살표
+8 x 14
+
+
+
+

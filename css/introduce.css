@@ -1,0 +1,106 @@
+/* 모바일용 CSS*/
+/* 모바일 - 컨텐츠 영역 CSS */
+.content_section > div {
+    margin-top: 60px;
+}
+
+.content_section > div:first-child {
+    margin-top: 0;
+}
+
+.content_row_1 {
+    text-align: center;
+}
+
+.content_row_1 img {
+    max-width: 100%;
+}
+
+.content_row_1 h3 {
+    margin: 26px 0 14px 0;
+    font-size: 1.625em;
+    color: #333;
+}
+
+.content_row_1 p {
+    font-size: 0.938em;
+    line-height: 1.625em;
+    color: #444;
+}
+
+.content_row_2 > article {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.content_row_2 > article:first-child {
+    margin-top: 0;
+}
+
+.content_row_2 img {
+    max-width: 100%;
+}
+
+.content_row_2 h4 {
+    margin: 26px 0 14px 0;
+    font-size: 1.188em;
+    color: #333;
+}
+
+.content_row_2 p {
+    font-size: 0.813em;
+    line-height: 1.313em;
+    color: #444;
+    text-align: justify;
+}
+
+.content_row_3 h4 {
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    font-size: 1.188em;
+    border-bottom: 3px solid pink;
+    color: #333;
+}
+
+.para p:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.para p {
+    font-size: 0.813em;
+    line-height: 1.313em;
+    color: #444;
+}
+
+/* 태블릿용 CSS */
+@media all and (min-width: 768px) {
+    /* 태블릿 - 컨텐츠 영역 CSS */
+    .content_section > div {
+        margin-top: 120px;
+    }
+}
+
+/* PC용 CSS */
+@media all and (min-width: 960px) {
+    /* PC - 컨텐츠 영역 CSS */
+    .content_row_2 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .content_row_2 > article {
+        margin-top: 0;
+        width: 30%;
+    }
+
+    .para {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .para p {
+        width: 48%;
+        text-align: justify;
+        margin: 0;
+    }
+}
