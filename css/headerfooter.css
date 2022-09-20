@@ -1,30 +1,30 @@
 /* 변수 */
 :root {
-    --main-color: #2ECC71;
-    --main-color-border: #39D67C;
-    --main-color-shadow: #25AB2E;
+    --main-color: pink;
+    --main-color-border: #f1c5d6;
+    --main-color-shadow: #fca7df;
 
     --nav-color: #2C3E50;
 
-    --latest-post-color: #FFC40F;
-    --latest-post-shadow: #B98E0B;
+    --latest-post-color: #fcc1d0;
+    --latest-post-shadow: #fc73ce;
 
-    --popular-post-color: #A660C2;
+    --popular-post-color: #dba6f0;
     --popular-post-shadow: #714185;
     --post-title-color: #FFF;
 
-    --gallery-color: #E65D5D;
+    --gallery-color: #e98484;
     --gallery-shadow: #C43434;
 
-    --rankup-color: #219AF7;
+    --rankup-color: #75bff8;
     --rankup-shadow: #1974BA;
 
-    --banner-color-1: #E6567A;
-    --banner-color-2: #C44968;
+    --banner-color-1: #eb6c8b;
+    --banner-color-2: #ce6d86;
 
     --social-color: #FFF;
 
-    --footer-color: #474747;
+    --footer-color: #858484;
     --footer-text-color: #FFF;
     --footer-shadow: #191919;
 
